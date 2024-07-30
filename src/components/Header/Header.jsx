@@ -33,7 +33,7 @@ function Header() {
           >
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
               <li>
-                <NavLink
+                <NavLink to = "/"
                   className={({isActive}) =>
                     `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-gray-700"}
                     border-b border-gray-100 hover:bg-gray-50 
@@ -44,6 +44,30 @@ function Header() {
                   Home
                 </NavLink>
               </li>
+              <li>
+                <NavLink to = "/about"
+                  className={({isActive}) =>
+                    `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-gray-700"}
+                    border-b border-gray-100 hover:bg-gray-50 
+                    lg:hover:bg-transparent lg:border-0 hover:text-orange-700
+                     lg:p-0`
+                  } // className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}.
+                >
+                  About
+                </NavLink>
+                </li>
+                <li>
+                <NavLink to = "/contactus"
+                  className={({isActive}) =>
+                    `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-gray-700"}
+                    border-b border-gray-100 hover:bg-gray-50 
+                    lg:hover:bg-transparent lg:border-0 hover:text-orange-700
+                     lg:p-0`
+                  } // className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}.
+                >
+                  ContactUs
+                </NavLink>
+                </li>
             </ul>
           </div>
         </div>
@@ -53,3 +77,7 @@ function Header() {
 }
 
 export default Header;
+
+// in the navlink with the help of "to" we will tell navlink that on clicking that section on which route 
+// we have to go. ex: to = "/about". isse ye bhi pta chl jaega ki konse wala ka data "isactive" mein hoga
+// aur data inject krne ka kaam react-router-dom khud kar dega.
